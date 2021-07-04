@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // Tudo dentro do Javascript é um objeto
+    // Uma funcao também é um objeto
+    function sum (a, b) {
+      console.log(this)
+      return a + b
+    }
+
+    const me = {
+      name: 'jose'
+    }
+
+    // function call :
+    // Chamando a funcao no console do browser:
+    // passar o contexto a ser executado pela funcao, o primeiro e o segundo argumentos exigidos pela funcao para poder ser executado
+    //sum.call(me, 1, 2) // passou o contexto do objeto me a ser executado pela funcao
+    //sum(1,2)  // nao passou o contexto a ser executado pela funcao. Neste caso assumiu o contexto global
+                // que será o contexto do navegador, se a funcao for executada no navegador
+
+
+    // Function apply
+    // Passar o contexto e os argumentos da funcao em um array
+    // sum.apply(me, [1, 2])
+
+  </script>
+</body>
+</html>
