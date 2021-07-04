@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // let é uma versao melhorada do var
+    // Ele é delimitado por bloco e por funcao
+    // let é uma variavel que nao tem o problema de ser delimitado só por funcao
+    let age = 21
+
+    age = 35 // Posso alterar o valor
+
+    // let age = 35 // Porém, não posso redeclarar a variaval como o "var"
+
+    // let também é delimitado por bloco
+    if (age > 18) {
+
+      let age = 32
+      let test = 32  // Test nao estará acessivel fora do bloco
+
+      console.log('caiu aqui dentro')
+      console.log('age:', age)
+    }
+
+
+  </script>
+</body>
+</html>
