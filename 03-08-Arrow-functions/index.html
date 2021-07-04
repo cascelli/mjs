@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // Function declaration :
+    // Declaracao normal 
+    //fucntion name() {
+    //  
+    //}
+
+    // Function expression :
+    // Criar uma constante e diz-se que o valor dela é uma funcao
+    //const name = function() {
+    //  
+    //}
+
+    // Arrow function 
+    // Elimina-se o nome function, acrescenta-se o (), seguido de => e delimitando o seu bloco por { }
+    // const name = () => {
+    //
+    //}
+
+    // const getRemainingyears = (age) => {
+    //   return 18 - age
+    // }
+
+    // simplificando a arrow function
+    // Eliminando o return e omitindo o {} se o codigo couber em uma linha
+    const getRemainingYears = (age) => 18 - age 
+
+    // Nao pode neste caso porque possui mais de uma instrucao.
+    // Neste caso tem que delimitar o bloco com {}
+    //const getRemainingYears = (age) => console.log('123'); 18 - age 
+    const getRemainingYears2 = (age) => {
+      console.log('123')
+      return 18 - age // Só posso omitir o return quando faço um retorno imediato
+    }
+
+    // objeto sem arrow function
+    const me = {
+       name: 'lucas',
+       age: 12,
+       greet() {
+         console.log(this) // A funcao leva em conta o contexto onde ela foi declarada
+       }
+    }
+
+    // objeto com arrow function
+    const me2 = {
+       name: 'lucas',
+       age: 12,
+       greet : () => {
+         console.log(this)  // A arow function ignora o contexto onde ela foi declarada
+       }
+    }
+
+  </script>
+</body>
+</html>
