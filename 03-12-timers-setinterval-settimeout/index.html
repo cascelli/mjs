@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+<script>
+
+ // Executa uma vez
+//  setTimeout(() => {
+//    console.log('executou')
+//  }, 5000);
+
+
+ const interval = setInterval(() => {
+   console.log('executou de novo')
+ }, 4000);
+
+ setTimeout(() => {
+   clearInterval(interval) // Limpa o loop acima passando a sua referencia declarada como interval em um constante 
+   console.log('concluiu')
+ }, 20000);
+
+
+</script>  
+</body>
+</html>
