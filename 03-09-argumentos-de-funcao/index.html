@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Argumentos de funcao</title>
+</head>
+<body>
+  <script>
+
+    // Passando os paramentros explicitamente como argumentos para a funcao
+    function sum (a,b) {
+      console.log(arguments)
+      console.log(arguments[0], arguments[1])
+      return a + b
+    }
+
+    // Passando os paramentros implicitamente como argumentos para a funcao
+    function sum2 () {
+      console.log(arguments)
+      console.log(arguments[0], arguments[1])
+      return arguments[0] + arguments[1]
+    }
+
+    // arguments nao funcionam com arrow functions
+    // const sum3 = () => {
+    //   return arguments[0] + arguments[1]
+    // }
+
+    const sum3 = (a, b) => {
+      return a + b
+    }
+
+    // Forma simplificada da arrow function acima (sem o return e { })
+    const sum4 = (a, b) =>  a + b
+
+    // Definindo um valor padrao para os parametros desejados da funcao
+    // Neste caso o valor de a deverá ser passado obrigatoriamente ao se chamar a funcao
+    const sum5 = (a, b = 0) =>  a + b
+
+    // Definindo um valor padrao para os parametros desejados da funcao
+    // Neste caso nenhum valor precisa ser passado obrigatoriamente ao se chamar a funcao
+    const sum6 = (a = 0, b = 0) =>  a + b
+
+</script>  
+</body>
+</html>
