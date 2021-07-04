@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // var age = 21
+    // var age = 22 // Redeclarando a variavel . Nao é o mesmo que reatribuir
+
+    // fuction showAge() {
+    //   var age = 21  // A variavel é definida por funcao (Nao é visivel fora da funcao)
+    // }
+
+    // Variáveis quando sao declaradas pela word "var" são delimitdas apenas por funcao 
+    // Porém não são delimitadas por bloco de código (Ex: bloco de código if abaixo)
+    var age = 21
+
+    age = 23  // Redefinindo a variavel age de 21 para 22
+
+    if (age > 18) {
+      // A variavel test mesmo definida dentro do bloco "if" está acessível fora dele
+      // se for usada mostrará o valor. Do contrario mostrará undefined se chamada no console.log, por exemplo
+      var test = 22
+      
+    }
+    // Mostrtando o conteúdo da variavel "test"
+    console.log(test)
+    console.log(age)
+
+  </script>
+</body>
+</html>
