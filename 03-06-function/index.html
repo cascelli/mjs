@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Delaracao basica
+    function greet() {
+      console.log('bom dia')
+      console.log(this) // this se referencia ao contexto
+    }
+
+    // Objetos declarando funcoes
+    const me = {
+      name: 'daniel',
+      greet: function() { // Modo tradicional de se defiinir uma funcao dentro de um objeto
+        console.log(this)
+        return 'batata'  // retorno da funcao. Quando nao for definido o return, retornará undefined
+      },
+      greet2() {          // Modo simplificado de se definir uma funcao dentro de um objeto
+        console.log(this)
+      }
+    }
+
+    // chamar me.greet() ou me.greet2() no console do navegador mostra o objeto me definido acima
+
+    function getRemainingYearsToMajority(age) {
+      return 18 - age
+    }
+
+    // Atribuindo uma funcao a uma variavel
+    // Na verdade o valor da constante será o valor de retorno da
+    // execucao da funcao referenciada na atribuiçao desta constante
+    const remainigYears = getRemainingYearsToMajority(15)
+
+    // Obs : se definirmos :
+    //  const remainigYears = getRemainingYearsToMajority  // sem o parentesis e o parâmetro de passagem
+    //  remainingYears será uma referência a funcao getRemainingYearsToMajority()
+
+  </script>
+</body>
+</html>
