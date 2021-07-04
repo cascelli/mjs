@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+<script>
+
+  class Human {
+
+    hungry = true
+    awake = true
+
+    eat() {
+      this.hungry = false
+    }
+
+    // sleep() {
+    //   this.awake = false
+    // }
+
+  }
+
+
+  // Injetando um novo metodo na classe via prototype
+  //
+  // Usado normalmente para manter a compatibilidade com navegadores antigos
+  //
+  // Evite usar o Prototype 
+  // Preferencialmente, criar todos os metodos diretamente na classe
+  //
+  // ATENCAO : NAO INJETAR funcoes com Arrow Functions porque podem nao funcionar
+  //
+  // Nao funcionará com Arrow Function :
+  //   Human.prototype.sleep = () => { this.awake = false }
+  // Use sempre funcoes declaradas no metodo tradicional como abaixo
+  Human.prototype.sleep = function () { // Definiu o metodo como "sleep" e entrou com o codigo da funcao
+    this.awake = false
+  }
+
+
+  const person = new Human()
+  
+  // digitar Human no console do navegador e pressiona enter para ver a definicao da classe human
+  // digitar Human.prototype no console do navegador para ter acesso aos metodos da classe
+
+  // Chamar o metodo injetado na classe somente depois de ter declarado ele no codigo anteriormente 
+  // Senão ele nao funcionará
+  person.sleep
+
+
+</script>  
+</body>
+</html>
