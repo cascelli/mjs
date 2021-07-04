@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+<script>
+
+  class Animal {
+    sex
+
+    constructor(props) {
+      this.sex = props.sex
+    }
+  }
+
+  class Human extends Animal {
+
+    // constructor(name) {
+    //   console.log('Instanciou ' + name)
+    //   this.name = name
+    // }
+
+    constructor(props) {
+
+      super(props)
+      
+      if (!props.name ) 
+       throw Error('Nome é obrigatorio !')
+      else 
+       console.log('Instanciou ' + props.name)
+
+      this.name = props.name
+      this.age = props.age
+      //this.sex = props.sex  // Movida para classe pai (Animal)
+    }
+
+    hungry = true
+    name
+    age
+    //sex // Movida para classe pai (Animal)
+
+    eat() {
+      this.hungry = false
+    }
+
+  }
+
+  // Criando uma instancia da classe Human
+  //const person = new Human('Lucas')
+
+  // Criando outra instancia da classe Human
+  //const person2 = new Human('Marcos')
+
+  // Chamar no console do navegador :
+  //person.hungry -> para saber o status de person 
+  //person.eat() -> para executar a funcao eat de person 
+  //person.hungry -> para saber o status de person (deverá estar como false apos chamada do metodo acima) 
+  //person2.hungry -> para saber o status de person2 (Independente do status de person pois so objetos diferentes) 
+
+  const person3 = new Human({
+    name: 'Carla',
+    age: 34,
+    sex: 'female'
+  })
+
+</script>  
+</body>
+</html>
