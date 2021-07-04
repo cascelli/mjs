@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+<script>
+
+  class Human {
+
+    hungry = true
+
+    eat() {
+      this.hungry = false
+    }
+  }
+
+  // Criando uma instancia da classe Human
+  const person = new Human()
+
+  // Criando outra instancia da classe Human
+  const person2 = new Human()
+
+  // Chamar no console do navegador :
+  //person.hungry -> para saber o status de person 
+  //person.eat() -> para executar a funcao eat de person 
+  //person.hungry -> para saber o status de person (deverá estar como false apos chamada do metodo acima) 
+  //person2.hungry -> para saber o status de person2 (Independente do status de person pois so objetos diferentes) 
+
+</script>  
+</body>
+</html>
