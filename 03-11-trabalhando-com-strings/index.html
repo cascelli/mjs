@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const name = 'Julio'
+    const age = 32
+
+    // concatenando strings
+    const sentence = 'olá, meu nome é ' + name + 'e eu tenho ' + age + ' anos'
+
+    // Concatenacao de strings com template literals
+    // (uso da crase ao invés de aspas simples ou aspas duplas)
+    const sentence2 = `olá, meu nome é ${name} e eu tenho ${age} anos`
+
+    // Aplicando template literasl para HTML
+    const html = `
+    <ul>
+      <li>
+        ${name}
+      </li>  
+      <li>
+        ${age}
+      </li>  
+    </ul>  
+    `
+
+    // NAO Aplicando template literasl para HTML
+    // Nao funciona !!!
+    const html2 = ' \
+      <ul> \
+        <li> \
+          ${name} \
+        </li> \
+        <li> \
+          ${age} \
+        </li>\
+      </ul>\
+    '
+
+    console.log(sentence)
+    console.log(sentence2)
+    console.log(html)
+    console.log(html2)
+
+  </script>  
+</body>
+</html>
