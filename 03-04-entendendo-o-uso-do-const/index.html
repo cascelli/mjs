@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+
+  <script>
+    var name = 'teste'  // Variavel 
+    const age = 22 // Constante
+
+    // const age = 23 // Nao posso redeclarar uma const
+    // age = 25 // uma constante nao pode ser reatribuida
+
+    // definindo um objeto como constante 
+    const me = {
+      name: 'Daniel',
+      age: 21
+    }
+
+
+    // Porém posso alterar a propriedade do mesmo, apesar do objeto ser uma constante :
+    me.age = 22
+
+
+    const list = ['banana', 'batata']
+
+    list.push('morango')
+
+
+    // Constantes são delimitadas por funcao e por bloco
+    const age2 = 21
+    if (age2 > 18) {
+
+      // Variable Shadowing (Péssima prática dentro do JavaScript)
+      // *** Evite fazer variable sahdowing dentro do seu codigo !!! ***
+      const age2 = 25  // Dentro de um bloco posso redeclarar a mesma constante declarada do lado de fora do mesmo
+      // Usando o valor da constante age2 definida dentro do bloco de código (25) ao inves da que foi definida fora dele (21)
+      const pastYears = age2 - 18  // pastYears está delimitada dentro do bloco. Não está acessivel de fora do mesmo
+      console.log(pastYears)
+
+    }
+
+
+
+
+
+
+
+  </script>
+
+</body>
+</html>
