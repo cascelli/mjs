@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const ingredients = ['ovo','presunto']
+    const spices = ['sal','pimenta']
+
+    //ingredients.push('sal', 'pimenta')
+
+    // Nao funciona pois acrescenta um terceiro elemento array de dois elementos em ingredients
+    //ingredients.push(spices)
+    // Resultado final da operacao acima :
+    // ['ovo', 'presunto', ['sal', 'pimenta']]
+    // 
+    // Solucao correta tradicional usando o metodo embutido "apply"
+    //ingredients.push.apply(ingredients, spices)
+
+    // Solucao com spread :
+    // Pode-se usar o spread operator para se passar parametros para uma funcao
+    ingredients.push(...spices)
+    // Resultado final da operacao acima : 
+    // ['ovo', 'presunto', 'sal', 'pimenta']
+
+  </script>  
+</body>
+</html>
