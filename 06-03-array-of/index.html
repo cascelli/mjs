@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // Criando um array convencional : usando []
+    const array = [1, 2, 3]
+
+    // Criando um array usando o método new Array()
+    // Preenchendo o array com 3 itens
+    const array2 = new Array(1, 2, 3)
+
+    // criando um array vazio de 6 posicoes
+    // Sem preencher os itens
+    // Ele ficara com as 6 posicoes contendo empty
+    const array3 = new Array(6)
+
+    array3.forEach(() => console.log('a'))
+
+    // Criando um array com um unico elemento de valor = 6
+    // Usar Array.of
+    const array4 = Array.of(6)
+
+    // Criando um array com um mais elementos
+    // Usar Array.of
+    const array5 = Array.of(6, 2, 4, 5, 7, 9)
+    
+    // Para conteúdos string nao tem problema. Sera criada um elemento no array
+    const array6 = new Array('teste')
+    
+    // Posso usar o Array.of também
+    const array7 = Array.of('asd', 'xyz', 'uio', 'etyutw', 'dhshd', 'dhjste')
+
+  </script>  
+</body>
+</html>
