@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // factory Function (retorna um objeto estruturado)
+    //function createUser(name, age, contact1, contact2, contact3) {
+    // factory function usando Rest operator (...)
+    function createUser(name, age, ...contacts) {
+      console.log(arguments) // Mostra os argumentos recebidos pela funcao
+      const args = Array.from(arguments) // Cria um array a partir dos argumentos recebidos pela funcao
+
+      return {
+        name,
+        age,
+        //contacts: [contact1, contact2, contact3]
+        //resolvendo qtde diversas de contatos com "arguments"
+        //contacts: args.slice(2) // Elimina os dois primeiros argumentos. Orestante é contato a ser inserido no array de contatos
+        //
+        contacts // os contatos já foram preenchidos na declaracao ao usar o Rest operator
+      }
+    }
+
+    // Método slice:
+    // Remove os dois primeiros itens do array abaixo
+    // ['a', 'b', 'c', 'd', 'e', 'f'].slice(2)
+    // o comando acima produz :
+    // ['c', 'd', 'e', 'f']
+
+
+  </script>  
+</body>
+</html>
