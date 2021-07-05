@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // Factory Function :
+    // Retorna um objeto estruturado baseado no
+    //  envio de parametros passados para a funcao
+    function createUser(name, age, email) {
+      return {
+        name,
+        age,
+        contact: { email }
+      }
+    }
+
+    // Criacao do objeto user a partir da chamada a funcao factory do objeto
+    const user = createUser('Lucas', 32, 'lucas@hotmail.com')
+
+    // Desestruturando o objeto 
+    // A funcao createUser cria o objeto e o devolve. 
+    // A desestruturacao do objeto devolve a propriedade desejada (name)
+    const { name } = createUser('Lucas', 32, 'lucas@hotmail.com')
+
+
+    // Construcao ruim :
+    function createPerson(person) {
+      return {
+        name: person.name,
+        age: person.age,
+        contact: { email: person.email }
+      }
+    }
+
+    const person = createPerson({
+      name: 'Lucas',
+      age: 32,
+      email: 'lucas@hotmail.com'
+    })
+
+    
+    // Construcao anterior com desestruturacao :
+    function createPerson2({ name, age, email }) {
+      return {
+        name,           // name: name,  // shorthand : Simplificando a declaracao 
+        age,            //age: age,     // shorthand : Simplificando a declaracao
+        contact: email //contact: { email: email }  // shorthand : Simplificando a declaracao
+      }
+    }
+
+    const person2 = createPerson2({
+      name: 'Lucas',
+      age: 32,
+      email: 'lucas@hotmail.com'
+    })
+
+
+  </script>  
+</body>
+</html>
