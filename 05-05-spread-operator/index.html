@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    const parts = ['ombro', 'joelho', 'orelha']
+
+    // Composicao tradicional :
+    const sentence = ['cabeça', parts[0], parts[1], parts[2], 'pé']
+
+    // Composicao com o "spread operator" :
+    const sentence2 = ['cabeça', ...parts, 'pé']
+
+
+    // Funcao factory tradicional recebendo parametros
+    function createUser( name, age, contact1, contact2, contact3) {
+      return {
+        name,
+        age,
+        contacts : [contact1, contact2, contact3]
+      }
+    }
+
+
+    // Funcao factory usando "spread operator" ao recebe parametros
+    // Nessa caso, posso chamar a funcao com quantidade de contatos diferentes
+    // que mesmo assim ela funcionaria
+    function createUser2( name, age, ...contacts) {
+      return {
+        name,
+        age,
+        contacts
+      }
+    }
+
+
+    const immutableArray = ['select', '*', 'from', 'posts']
+    const mutableArray = immutableArray
+
+    // Neste caso, ao usar o "push" ambos os arrays serao acrescidos 
+    // de 'where id = 1'
+    mutableArray.push('where id = 1')
+
+
+    const immutableArray2 = ['select', '*', 'from', 'posts']
+    const mutableArray2 = immutableArray2
+
+    // Neste caso, ao usar o "push" apenas o mutableArray2 será acrescido 
+    // de 'where id = 1'
+    // (immutableArray2 não será alterado)
+    const mutableArray2 = ...immutableArray
+
+    mutableArray2.push('where id = 1')
+
+  </script>  
+</body>
+</html>
