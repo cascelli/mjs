@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    const user = {
+      name: 'danielbonifacio',
+      email: 'contato@danielboifacio.com.br'
+    }
+
+    const newUser = user  // newUser recebe a referencia do objeto user declarado acima
+
+    // Ao alterar as propriedades de newUser, estarei alterando o objeto user também
+    // porque na  verdade estamos trabalhando em um unico objeto (user) e newUser
+    // que nada mais é doque apenas a referencia para o objeto user original
+    newUser.email = 'joao@zinho.com'
+    newUser.name = 'joazinho123'
+
+ 
+ 
+    // Para clonar um objeto a partir de outro pode-se usar Object.assign :
+    // Object assing cria um novo objeto e recupera as propriedades de outro objeto (user)
+    // e atribuindo estas propriedades ao novo objeto criado (newUser2)
+    const newUser2 = Object.assign({}, user)
+
+    // Ao alterar as propriedades de newUser2, estarei alterando o objeto newUser2 apenas
+    // O Objeto user original permanece inalterado
+    newUser2.email = 'joao@zinho.com'
+    newUser2.name = 'joazinho123'
+
+
+    // Clonando objetos do jeito moderno usando "Spread operator" :
+    // *** ATENCAO ***
+    // Esta tecnica só funciona com objetos "rasos", ou seja que nao tem outros objetois dentro do objeto raiz
+    // Ver a duvida do suporte a ese capitulo onde se usa o 'cloneDeep' do pacote 'lodash'
+    const newUser3 = {...user}
+    // Usando a opcao JSON.parse
+    // const newUser3 = JSON.parse(JSON.stringify(user))
+    //
+    // Usando cloneDeep :
+    // var cloneDeep = require('lodash.clonedeep');
+    // var objects = [{ 'a': 1 }, { 'b': 2 }];
+    // var deep = cloneDeep(objects);
+    // console.log(deep[0] === objects[0]); // => false
+
+  </script>  
+</body>
+</html>
