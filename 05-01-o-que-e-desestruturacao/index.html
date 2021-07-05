@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+<script>
+  const person = {
+    name: 'Italo',
+    age: 14
+  }
+
+  // Forma classica de passar parametros :
+  // Chamada da funcao no console : introduce(person.name, person.age) 
+  //function introduce(name, age) {
+  // Forma usando desestruturtacao : passando o objeto
+  // Chamada da funcao no console : introduce(person) 
+  //function introduce(person) {
+  // Chamada da funcao no console : introduce(person) 
+  function introduce(person) {
+    console.log(`Oi ! Meu nome é ${person.name} e eu tenho ${person.age} anos !`)
+  }
+
+  const fruits = ['banana', 'morango', 'manga']
+
+  // Forma classica de obter elemento de um array
+  // Digitar no console : firstFruit e secondFruit para obter cada um dos componentes do array
+  //const firstFruit = fruits[0]
+  //const secondFruit = fruits[1]
+
+  // Forma com uso de desestruturacao
+  // Digitar no console : firstFruit e secondFruit para obter cada um dos componentes do array
+  const[ firstFruit, secondFruit] = fruits
+
+</script>  
+</body>
+</html>
