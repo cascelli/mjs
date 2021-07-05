@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    const fruits = ['banana', 'morango', 'manga', 'wiwi', 'maracujá']
+
+    // Recupera o primeiro e segundo itens 
+    const [firstItem, secondItem] = fruits
+
+    // Recupera os itens a partir da terceira posicao
+    const otherItens = fruits.slice(2)
+
+    // Usando Rest Operator
+    const [firstItem2, secondItem2, ...otherItens2] = fruits
+
+    // OBS : 
+    // Usando Rest Operator nao funciona. O restOperator tem que ser o ultimo
+    // (nao pode ter nada depois dele)
+    //const [firstItem2, secondItem2, ...otherItens2, lastItem] = fruits
+
+
+  </script>  
+</body>
+</html>
