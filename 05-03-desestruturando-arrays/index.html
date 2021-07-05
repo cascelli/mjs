@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+ <script>
+   
+   const fruits = ['banana','morango', 'manga']
+
+   // Recuperando itens da maneira trdicional
+   const firstItem = fruits[0]
+   const secondItem = fruits[1]
+   const thirdItem = fruits[2]
+
+   // Recuperando itens com desestruturacao
+   // Declaro constantes e cada uma destas constantes declaradas
+   //  corresponderá a posicao relativa do item no array 
+   //   firstItemD -> banana (primeiro item no array - fruits[0])
+   //   secondItemD -> morango (segundo item no array - fruits[1])
+   const [firsItemD, secondItemD]= fruits  
+
+   // Recuperando apenas o segundo item sem precisar declarar uma variavel para o primeiro
+   // basta pular o primeiro, deixando a virgula para indicar o separador do item de indice 0 do array
+   const [, secondItemD2]= fruits  
+
+
+
+   const person = { name: 'Joaquim', age: 32}
+   const person2 = { name: 'Jonas', age: 33}
+   const person3 = { name: 'Joao', age: 34}
+
+   const friends = [person, person2, person3]
+
+   // Recuperando a propriedade name do segundo item do array de friends
+   // Modo classico 1 :
+   const secondPerson = friends[1].name
+   const name2 = secondPerson.name
+   // Modo classico 2 :
+   const secondPersonName = friends[1].name
+
+   // Usando desestruturacao e combinação de destestruturações
+   // no caso desetruturou o array friends e o objeto person2:
+   const [, { name } ] = friends
+
+   const chart = [ [1,2], [3,4], [5,6]]
+
+   // Recuperando o elemento y=4 do array de coordenadas [x,y] acima
+   const [,[,y2]] = chart
+
+   // Recuperando o elemento y=6 do array de coordenadas [x,y] acima
+   const [,,[,y3]] = chart
+
+   // Recuperando o elemento x=5 e y=6 do array de coordenadas [x,y] acima
+   const [,,[x03,y03]] = chart
+
+
+ </script>  
+</body>
+</html>
