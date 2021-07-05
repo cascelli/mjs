@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+<script>
+
+  const person = {
+    name: 'Italo',
+    age: 14,
+    contact: {
+      email: 'daniel.bonifacio@algaworks.com'
+    },
+    foo: {
+      bar: {
+        fone: '1234-5678'
+      }
+    }
+  }
+
+  // Forma classica de referenciar uma propriedade de objeto
+  //const name = person.name
+  //const age = person.age
+
+  // Desestruturando as propriedades name, age, email, fone do objeto person :
+  //
+  // Exemplo para recuperar contact :
+  //  const { name, age, contact } = person
+  // Neste caso, contact, foo e bar nao podem ser recuperados :
+  const { name, age, contact: { email }, foo:{ bar: {fone} } } = person
+
+  // Trocando o nome das propriedades na desestruturacao 
+  // chamar batata no console para obter a propriedade person.name
+  const { name: batata} = person
+
+  // Obs : referenciar uma propriedade nao definida no objeto retorna undefined
+  const { celular }  = person
+
+
+
+</script>  
+</body>
+</html>
