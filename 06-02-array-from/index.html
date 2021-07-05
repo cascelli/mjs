@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    function greet() {
+
+      // arguments nao sao um array e nao sao iteraveis com funcoes de iteracao de array
+      // arguments é uma lista iteravel mas nao é um array
+      // Se verificarmos o prototype desta lista, nãoo existe o método
+      //  forEach para iteração desta lista como em um array
+      console.log(arguments)
+
+      // Transforma os paramentros (arguments) em um array 
+      //const args = Array.from(arguments, function(name) {
+      // e pode também executar uma funcao de map junto
+      const args = Array.from(arguments, function(name) {
+        return name + ' !'
+      })
+
+      // Iterando em cada elemento do array args com o método
+      //  forEach disponivel em arrays :
+      args.forEach(argument => {
+        console.log(`Hello, ${argument}`)        
+      });
+    }
+
+    greet('Julio', 'Helio', 'jonas')
+
+  </script>  
+</body>
+</html>
