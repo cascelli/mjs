@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    const parts = ['ombro', 'joelho']
+
+    // Insercao de itens do array parts no metodo tradicional
+    const sentence = ['cabeça', parts[0], parts[1],'pé']
+
+    //Insercao de itens do array parts com Spread Operator (...)
+    const sentence2 = ['cabeça', ...parts,'pé']
+
+
+    const immutableArray = ['select', '*', 'from,']
+
+    // cria uma referencia para o mesmo array immutableArray e nao um outro array
+    const mutableArray = immutableArray
+
+    // Acrescenta batata em immutableArray e mutableArray
+    mutableArray.push('batata')
+
+
+
+
+    // Clonando arrays com Spread Operator
+    const mutableArray2 = [...immutableArray]
+
+    // Acrescenta batata em mutableArray2 e deixa immutableArray intacto
+    mutableArray2.push('batata')
+
+
+
+
+
+  </script>  
+</body>
+</html>
