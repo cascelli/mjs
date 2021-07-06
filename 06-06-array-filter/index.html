@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Aray.filter</title>
+</head>
+<body>
+  <script>
+
+    const students = [
+      { name: 'Lucas', grade: 8},
+      { name: 'Mario', grade: 2},
+      { name: 'Jean', grade: 10},
+      { name: 'Rogerio', grade: 6},
+      { name: 'Marcos', grade: 5},
+    ]
+
+    const flushed = students.filter( pupil => {
+      // Avalia a nota do aluno e, 
+      //  caso seja verdadeira a condicao de nota < 6, 
+      //  retorna o registro para o array flushed
+      // OBS : Ver documentacao sobrte valores Thruthy e Falsy
+
+      return pupil.grade < 6 
+    })
+
+    console.log('\n Alunos com nota inferior a 6 :')
+    console.log(flushed)
+
+
+    const flushed2 = students.filter( pupil => {
+      // Avalia a nota do aluno e, 
+      //  caso seja verdadeira a condicao de nota >= 5, 
+      //  retorna o registro para o array flushed
+      // OBS : Ver documentacao sobrte valores Thruthy e Falsy
+
+      return pupil.grade >= 6 
+    })
+
+    console.log('\n Alunos com nota superior a 5 :')
+    console.log(flushed2)
+
+  </script>
+</body>
+</html>
