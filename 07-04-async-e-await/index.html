@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Async e Await</title>
+</head>
+<body>
+  <script>
+
+    // Funcao com Promise
+    // function handleClick2() {
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //       resolve('batata')
+    //     }, 5000);
+    //   })
+    // }
+
+
+    // Funcao auxiliar para uso com funcao declarada com async 
+    function sleep(ms) {
+      return new Promise(
+        resolve => { setTimeout(() => {
+          resolve(true)
+        }, ms);
+      })
+    }
+
+    // Keyword async antes de uma declaracao de funcao retorna uma promise
+    // Mais fácil de trabalhar do que em uma funcao com Promise com uso de reject e resolve
+    // (Codigo fica muito mais clean)
+    async function handleClick() {
+      // await só pode ser usada dentro do bloco function declarada com async
+      await sleep(5000) 
+      throw 'Erro ao executar algo' // Mostra o erro
+      return 123 // Este será o valor retornado da Promise
+    }
+
+
+    
+  </script>  
+</body>
+</html>
