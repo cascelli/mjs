@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Como funciona uma promise</title>
+</head>
+<body>
+  <script>
+
+    // Promise sendo executad ano momento da execucao do script
+    // const batata = new Promise((resolve, reject) => {
+    //   setTimeout(()=> {
+    //     resolve(123)  
+    //   }, 5000)
+    // })
+
+    // Promise encapsulada dentro de uma funcao
+    // Só será executada ao se chamar a funcao
+    function handleClick() {
+      return new Promise((resolve, reject) => {
+        console.log('Teste de execucao')
+        setTimeout(()=> {
+          // resolve(123)  // Resolvendo
+          reject('Erro Inesperado')      // Rejeitando
+        }, 5000)
+      })
+    }
+
+    const result = handleClick()
+      .then(res => {  // metodo then é usado quando a promise for resolvida
+        console.log(123 === result)
+        console.log('Finalizou !')
+        return res
+      })
+      .catch( err => { // método catch é usad quando a promise nao for resolvida
+        console.log('Houve um erro')
+        console.log(err)
+      })
+
+
+
+  </script>
+</body>
+</html>
