@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Promise.all</title>
+</head>
+<body>
+  <script>
+
+    const baseUrl = 'https://jsonplaceholder.typicode.com'
+
+    async function getTodos() {
+
+      // Metodo para chamar todas as promises de uma vez
+      // Poupa muito tempo nas requisicoes ao inves de fazer cada uma em sequencia
+      const promises = Promise.all([
+
+        // fetch : api existente dentro do navegador para fazer requisicões http
+        //  const firstTodo = 
+        //await fetch(`${baseUrl}/todos/1`).then(res => res.json())
+        fetch(`${baseUrl}/todos/1`).then(res => res.json()),
+            //console.log(`FirstTodo :\n ${firstTodo}`)
+    
+        //  const secondTodo = 
+        //await fetch(`${baseUrl}/todos/2`).then(res => res.json())
+        fetch(`${baseUrl}/todos/2`).then(res => res.json()),
+        //    console.log(`secondTodo :\n ${secondTodo}`)
+    
+        //  const thirdTodo = 
+        //await fetch(`${baseUrl}/todos/3`).then(res => res.json())
+        fetch(`${baseUrl}/todos/3`).then(res => res.json()),
+        //    console.log(`ThirdTodo :\n ${thirdTodo}`)
+
+      ])
+
+
+      //return [ firstTodo, secondTodo, thirdTodo]   
+      console.log(promises)
+      return promises
+
+    }
+
+    const todos = getTodos()
+
+
+  </script>
+</body>
+</html>
