@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const fruits = ['banana', 'morango', 'manga', 'abacate']
+
+    // Iterando em cada elemento do array
+    function eatAllFruits() {
+      fruits.forEach(() => {
+        console.log('Humm, acabei de comer uma fruta !')
+       })
+    }
+
+    // Iterando em cada elemento do array porem recuperando cada um 
+    function eatAllFruits() {
+      // fruits.forEach(function (fruit) {  // Declaracao de uma funcao normal
+      // fruits.forEach((fruit) => { // Declaracao de uma funcao com com Arrow Function (nao precisa escrever 'function' )
+      // fruits.forEach(fruit => { // Declaracao de uma funcao com com Arrow Function (quando a funcao tiver um paramentro apenas, nao precisa envolve-lo entre parentesis )
+      fruits.forEach(fruit => { 
+        console.log(`Humm, acabei de comer ${fruit} !`)
+      })
+
+      console.log('\n\n')
+
+      // Trabalhando com o paranmetro indice do array, além do seu elemento
+      // Com mais parametros, é preciso encapsulá-los entre parentesis
+      fruits.forEach((fruit, index) => { 
+        console.log(` => Humm, acabei de comer ${fruit} !`)
+        console.log(`    Ele era o item de índice ${index + 1} da minha lista`)
+      })
+
+
+    }
+
+
+    eatAllFruits()
+
+
+
+
+  </script>  
+</body>
+</html>
