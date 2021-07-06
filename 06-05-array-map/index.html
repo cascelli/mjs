@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // array de strings
+    const fruits = ['banana', 'morango', 'manga']
+
+    fruits.map(fruit => {
+      console.log(fruit.toUpperCase()) // toUppercase() é metodo de arrays de strings
+    })
+
+    console.log ('\n')
+
+    // Usar o metodo map de uma lista sempre que precisar iterar sobre uma lista e retornar um valor especifico
+    // O metodo map retorna um valor sem alterar o array original
+    const capitalizeFruits = fruits.map(fruit => {
+      console.log(' => ' + fruit.toUpperCase()) // toUppercase() é metodo de arrays de strings
+      return fruit.toUpperCase() // 'É preciso usar o return para devolver algo. Caso contrario receberemos undefined'
+    })
+
+    console.log ('\n Array original, fruits :')
+
+    console.log(fruits)
+
+    console.log ('\n Array retornado pelo Map, capitalizedrFuits')
+
+    console.log(capitalizeFruits)
+
+  </script>  
+</body>
+</html>
