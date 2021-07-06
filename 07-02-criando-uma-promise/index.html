@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Criando uma Promise</title>
+</head>
+<body>
+  <script>
+
+    const batata = new Promise((resolve, reject) => {
+      setTimeout(()=> {
+        // Obs : se colocar resolve e reject juntos, 
+        //       prevalece a que for colocada primeiro
+        // Resolver (fulfilled)
+        resolve('😊')  // Colocar emoji no Windows : tecla do windows + ".""
+        // Rejeitar (rejected)
+        reject('🥵')  // Colocar emoji no Windows : tecla do windows + ".""
+      }, 5000)
+    })
+
+
+  </script>  
+</body>
+</html>
+
