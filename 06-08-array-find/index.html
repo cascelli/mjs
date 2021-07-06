@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Array.find</title>
+</head>
+<body>
+  <script>
+
+    const students = [
+      { name: 'Lucas', grade: 8},
+      { name: 'Mario', grade: 2},
+      { name: 'Jean', grade: 10},
+      { name: 'Rogerio', grade: 6},
+      { name: 'Marcos', grade: 5},
+      { name: 'Jean', grade: 5}
+    ]
+
+    // Atenção para diferença entre os métodos find e filter
+    //
+    // => find devolve um item apenas ou nenhum (undefined)
+    // => filter devolve 0 ou mais itens em um array
+
+    // Usando método find para encontrar um item
+    // Devolve um objeto
+    // Assim que encontra o primeiro item, pára a procura
+    //  e libera a memória e o processamento
+    // Obs : O método find pede uma função de callback
+    const specificStudent = students.find(pupil => {
+      if (pupil.name === 'Jean') {
+        return true
+      }
+      //console.log(pupil)
+    })
+
+    console.log(specificStudent)
+
+    // Usando método filter para encontrar 0 ou mais itens
+    // Devolve um array
+    // Precisa iterar sobre todos os itens (consome + memoria e + processamento)
+    // Obs : O método filter pede uma função de callback
+    const specificStudent2 = students.filter(pupil => {
+      if (pupil.name === 'Jean') {
+        return true
+      }
+      //console.log(pupil)
+    })
+
+    console.log(specificStudent2)
+
+  </script>  
+</body>
+</html>
