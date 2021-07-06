@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Array.reduce</title>
+</head>
+<body>
+  <script>
+
+    const students = [
+      { name: 'Lucas', grade: 8},
+      { name: 'Mario', grade: 2},
+      { name: 'Jean', grade: 10},
+      { name: 'Rogerio', grade: 6},
+      { name: 'Marcos', grade: 5},
+    ]
+
+    // obtendo a soma das notas dos alunos :
+    // Usando codigo imperativo 
+    // Não recomendado porque pode gerar efeitos colaterais
+    // além de precisar usar uma variavel
+    let totalGrade = 0
+
+    students.forEach( pupil => {
+      totalGrade += pupil.grade
+    })
+
+    // Usando codigo funcional com reduce
+    // reduzir os estudantes a um assunto de importancia 
+    // (total de pontos)
+    //const classroomTotalPoints = students.reduce(() => {}, 0) // Chama um funcao de callback e uma variavel de inicializacao
+    const classroomTotalPoints = students.reduce(
+      //() => {},   // Funcao de callback
+      (prev, current) => { // recebe um valor anterior (prev) e um valor atualizado (current)
+
+        console.log('\nValores :')
+        console.log('prev :', prev)
+        console.log('current :', current)
+        // Sempre precisa retornar um valor para não obter undefined no valor da próxima iteração
+        // O valor retornado da iteração será o valor prev da proxima iteração
+        return prev + current.grade  // retorna o valor previo como sendo o anterior somado com o valor corrente de grade
+
+      },   // Funcao de callback
+      0    // vriavel de inicializacao a ser "reduzida"
+    ) // aplicando o método reduce chamando uma funcao de callback e passando uma variavel de inicializacao
+
+    console.log('ClassroomtotalPoins : ', classroomTotalPoints)
+
+  </script>
+</body>
+</html>
