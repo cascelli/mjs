@@ -1,8 +1,10 @@
 "use strict";
-// Definindo uma constante como sendo do tipo definido acima
-const cpf = '123';
-// Definindo constantes como sendo do tipo definido acima
-const cnpj1 = "01.234.567/0001-00";
-const cnpj2 = 1234567000100;
-// pressionar CTRL + ESPACE de pois do sinalde = para listar as opções (male e female na auto lista do editor)
-const sex = undefined;
+//function greet(name:any) {
+function greet(name, age) {
+    console.log(`Hello, ${name.toUpperCase()} !`);
+}
+greet('Daniel', 23);
+// Nao funciona para os tipos abaixo porque para number e boolean 
+//  não existe a função toUpperCase de strings
+// greet(0)
+//greet(true)
